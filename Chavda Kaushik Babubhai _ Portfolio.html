@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Chavda Kaushik Babubhai | Web Developer & Data Analytics</title>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=IBM+Plex+Sans:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#eef2f6;--card:#fff;--ink:#14213d;--mute:#51607a;--line:#d3dce8;--web:#0f8b8d;--data:#d9822b;--on:#fff;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0e1626;--card:#16223a;--ink:#e8eef8;--mute:#9db0cc;--line:#2a3a58;--web:#3fc1c3;--data:#f0a24f;--on:#0e1626}}
+:root[data-theme="dark"]{--bg:#0e1626;--card:#16223a;--ink:#e8eef8;--mute:#9db0cc;--line:#2a3a58;--web:#3fc1c3;--data:#f0a24f;--on:#0e1626}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 17px/1.6 "IBM Plex Sans",system-ui,sans-serif}
+h1,h2,h3{font-family:"Bricolage Grotesque",system-ui,sans-serif;line-height:1.1;margin:0}
+a{color:inherit}
+.wrap{max-width:1040px;margin:0 auto;padding:0 22px}
+nav{display:flex;justify-content:space-between;align-items:center;padding:20px 0}
+nav b{font-family:"Bricolage Grotesque",sans-serif;font-size:20px}
+nav a{margin-left:20px;text-decoration:none;color:var(--mute)}
+nav a:hover,nav a:focus-visible{color:var(--ink)}
+.hero{display:grid;grid-template-columns:1.2fr 1fr;gap:40px;align-items:center;padding:48px 0 64px}
+.hero h1{font-size:clamp(40px,6.5vw,76px);font-weight:800;letter-spacing:-.03em}
+.hero p{color:var(--mute);max-width:46ch;margin:20px 0 28px}
+.btn{display:inline-block;padding:12px 22px;border-radius:10px;background:var(--ink);color:var(--bg);text-decoration:none;font-weight:500;margin-right:10px}
+.btn.alt{background:transparent;color:var(--ink);border:1.5px solid var(--ink)}
+.btn:focus-visible,.tab:focus-visible{outline:3px solid var(--web);outline-offset:3px}
+.chart{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:22px}
+.chart h3{font-size:18px;margin-bottom:14px}
+.row{display:grid;grid-template-columns:92px 1fr;align-items:center;gap:10px;margin:9px 0;font-size:15px}
+.bar{height:14px;border-radius:7px;background:var(--line);overflow:hidden}
+.bar i{display:block;height:100%;border-radius:7px;animation:grow 1.1s cubic-bezier(.2,.8,.2,1) both}
+.web i{background:var(--web)}.data i{background:var(--data)}
+@keyframes grow{from{width:0!important}}
+.legend{display:flex;gap:16px;font-size:14px;color:var(--mute);margin-top:14px}
+.dot{display:inline-block;width:10px;height:10px;border-radius:50%;margin-right:6px}
+section{padding:56px 0;border-top:1px solid var(--line)}
+section h2{font-size:clamp(28px,4vw,40px);margin-bottom:10px}
+.sub{color:var(--mute);margin:0 0 28px;max-width:60ch}
+.tabs{display:flex;gap:8px;margin-bottom:24px;flex-wrap:wrap}
+.tab{font:500 15px "IBM Plex Sans",sans-serif;padding:9px 18px;border-radius:999px;border:1.5px solid var(--line);background:transparent;color:var(--ink);cursor:pointer}
+.tab[aria-selected="true"]{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(290px,1fr));gap:18px}
+.proj{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:22px;border-top:4px solid var(--web)}
+.proj.d{border-top-color:var(--data)}
+.proj h3{font-size:21px;margin-bottom:8px}
+.proj p{margin:0 0 14px;color:var(--mute);font-size:15.5px}
+.tags{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:14px}
+.tags span{font-size:13px;padding:3px 10px;border-radius:6px;background:var(--bg);border:1px solid var(--line)}
+.links a{font-weight:500;margin-right:16px;font-size:15px}
+.skills{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:28px}
+.skills h3{font-size:20px;margin-bottom:10px}
+.skills ul{margin:0;padding-left:18px;color:var(--mute)}
+form{display:grid;gap:12px;max-width:520px}
+input,textarea{font:inherit;padding:12px;border-radius:10px;border:1.5px solid var(--line);background:var(--card);color:var(--ink);width:100%}
+input:focus-visible,textarea:focus-visible{outline:3px solid var(--web);outline-offset:1px}
+button.btn{border:0;cursor:pointer;font:500 17px "IBM Plex Sans",sans-serif;justify-self:start}
+footer{padding:30px 0;color:var(--mute);font-size:14px;border-top:1px solid var(--line)}
+[hidden]{display:none!important}
+@media (max-width:760px){.hero{grid-template-columns:1fr;padding-top:24px}nav a{margin-left:12px}}
+@media (prefers-reduced-motion:reduce){.bar i{animation:none}html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<nav><b>Kaushik Chavda</b><div><a href="#work">Work</a><a href="#skills">Skills</a><a href="#education">Education</a><a href="#contact">Contact</a></div></nav>
+
+<header class="hero">
+<div>
+<h1>Chavda Kaushik Babubhai</h1>
+<h2 style="font-size:clamp(20px,3vw,28px);margin-top:12px;color:var(--web)">Web Developer &amp; Data Analytics</h2>
+<p>BCA completed, MCA running at GLS University. I work with PHP, MySQL and JavaScript on the web side, and Python, pandas, Excel and Power BI on the data side. I build booking systems and admin panels for businesses, and I use Python and pandas to turn raw datasets into clear answers.</p>
+<a class="btn" href="#contact">Hire me</a><a class="btn alt" href="#work">See my work</a>
+</div>
+<div class="chart" aria-label="Skill levels">
+<h3>What I work with</h3>
+<div class="row"><span>PHP</span><div class="bar web"><i style="width:80%"></i></div></div>
+<div class="row"><span>MySQL</span><div class="bar web"><i style="width:75%"></i></div></div>
+<div class="row"><span>JavaScript</span><div class="bar web"><i style="width:65%"></i></div></div>
+<div class="row"><span>Git</span><div class="bar web"><i style="width:60%"></i></div></div>
+<div class="row"><span>Python</span><div class="bar data"><i style="width:70%"></i></div></div>
+<div class="row"><span>pandas</span><div class="bar data"><i style="width:68%"></i></div></div>
+<div class="row"><span>Excel</span><div class="bar data"><i style="width:70%"></i></div></div>
+<div class="row"><span>Power BI</span><div class="bar data"><i style="width:55%"></i></div></div>
+<div class="legend"><span><span class="dot" style="background:var(--web)"></span>Web development</span><span><span class="dot" style="background:var(--data)"></span>Data analytics</span></div>
+</div>
+</header>
+
+<section id="work">
+<h2>Projects</h2>
+<p class="sub">Pick a track to filter the projects.</p>
+<div class="tabs" role="tablist">
+<button class="tab" role="tab" aria-selected="true" data-t="all">All</button>
+<button class="tab" role="tab" aria-selected="false" data-t="w">Web development</button>
+<button class="tab" role="tab" aria-selected="false" data-t="d">Data analytics</button>
+</div>
+<div class="grid" id="grid">
+<article class="proj" data-k="w"><h3>Clinic Appointment System</h3><p>Patients book slots with a doctor; staff manage schedules from an admin panel.</p><div class="tags"><span>PHP</span><span>MySQL</span><span>HTML/CSS</span></div><div class="links"><a href="#">Live demo</a><a href="#">GitHub</a></div></article>
+<article class="proj" data-k="w"><h3>Hotel Room Booking System</h3><p>Rooms, guests, services and bookings in one dashboard, with availability checks.</p><div class="tags"><span>PHP</span><span>MySQL</span><span>JavaScript</span></div><div class="links"><a href="#">Live demo</a><a href="#">GitHub</a></div></article>
+<article class="proj" data-k="w"><h3>Login and Register System</h3><p>Secure sign-up and login with hashed passwords and session handling.</p><div class="tags"><span>PHP</span><span>MySQL</span><span>Sessions</span></div><div class="links"><a href="#">Live demo</a><a href="#">GitHub</a></div></article>
+<article class="proj d" data-k="d"><h3>IPL Dataset Analysis</h3><p>Cleaned the IPL player dataset and explored it with filters, groupings and plots.</p><div class="tags"><span>Python</span><span>pandas</span><span>matplotlib</span></div><div class="links"><a href="#">Notebook</a><a href="#">GitHub</a></div></article>
+<article class="proj d" data-k="d"><h3>Student Marks Analysis</h3><p>Averages, toppers and subject-wise comparisons from a marks CSV.</p><div class="tags"><span>Python</span><span>pandas</span><span>CSV</span></div><div class="links"><a href="#">Notebook</a><a href="#">GitHub</a></div></article>
+<article class="proj d" data-k="d"><h3>Pokemon Data Cleaning</h3><p>Handled missing values, added a Total column and charted types.</p><div class="tags"><span>Python</span><span>pandas</span><span>Visualization</span></div><div class="links"><a href="#">Notebook</a><a href="#">GitHub</a></div></article>
+</div>
+</section>
+
+<section id="skills">
+<h2>Skills</h2>
+<div class="skills" style="margin-top:22px">
+<div><h3>Web development</h3><ul><li>PHP: good</li><li>MySQL: good</li><li>JavaScript: intermediate</li><li>Git and GitHub: intermediate</li></ul></div>
+<div><h3>Data analytics</h3><ul><li>Python: intermediate</li><li>pandas: intermediate</li><li>Excel: good</li><li>Power BI: beginner</li></ul></div>
+</div>
+</section>
+
+<section id="education">
+<h2>Education</h2>
+<div class="grid" style="margin-top:22px">
+<article class="proj"><h3>MCA</h3><p>GLS University, Ahmedabad</p><div class="tags"><span>Running</span></div></article>
+<article class="proj d"><h3>BCA</h3><p>Saurashtra University, Rajkot</p><div class="tags"><span>2023 to 2026</span><span>Completed</span></div></article>
+</div>
+</section>
+
+<section id="contact">
+<h2>Let's work together</h2>
+<p class="sub">Tell me what you need built or analysed. I usually reply within a day.</p>
+<p class="links"><a href="mailto:kaushikchavda919@gmail.com">kaushikchavda919@gmail.com</a><a href="tel:+919408623223">+91 94086 23223</a><span style="color:var(--mute)">Amreli, Gujarat</span></p>
+<form id="f">
+<input name="n" placeholder="Your name" aria-label="Your name" required>
+<input name="e" type="email" placeholder="Your email" aria-label="Your email" required>
+<textarea name="m" rows="4" placeholder="What do you need?" aria-label="Message" required></textarea>
+<button class="btn" type="submit">Send message</button>
+</form>
+<p id="ok" hidden class="sub">Your email app should have opened with the message. If not, write to kaushikchavda919@gmail.com.</p>
+</section>
+<footer>Chavda Kaushik Babubhai. Web Developer &amp; Data Analytics.</footer>
+</div>
+<script>
+var tabs=document.querySelectorAll('.tab'),cards=document.querySelectorAll('.proj');
+tabs.forEach(function(t){t.addEventListener('click',function(){
+tabs.forEach(function(x){x.setAttribute('aria-selected',x===t)});
+cards.forEach(function(c){c.hidden=t.dataset.t!=='all'&&c.dataset.k!==t.dataset.t});
+})});
+document.getElementById('f').addEventListener('submit',function(e){e.preventDefault();var f=this;location.href='mailto:kaushikchavda919@gmail.com?subject='+encodeURIComponent('Portfolio enquiry from '+f.n.value)+'&body='+encodeURIComponent(f.m.value+'\n\n'+f.n.value+' ('+f.e.value+')');this.hidden=true;document.getElementById('ok').hidden=false});
+</script>
+</body>
+</html>
